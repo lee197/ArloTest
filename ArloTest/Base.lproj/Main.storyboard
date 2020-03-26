@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArloTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-LK-Dth">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eCell" rowHeight="98" id="ehr-31-RAm" customClass="EmployeeTVCell" customModule="ArloTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehr-31-RAm" id="Uy4-3Q-r6n">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czU-oI-Pcg">
+                                                    <rect key="frame" x="352" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvZ-og-qbr">
+                                                    <rect key="frame" x="20" y="38" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JvZ-og-qbr" firstAttribute="leading" secondItem="Uy4-3Q-r6n" secondAttribute="leadingMargin" id="3in-Dm-dH3"/>
+                                                <constraint firstItem="JvZ-og-qbr" firstAttribute="top" secondItem="Uy4-3Q-r6n" secondAttribute="topMargin" constant="27" id="akC-sq-hEm"/>
+                                                <constraint firstItem="czU-oI-Pcg" firstAttribute="trailing" secondItem="Uy4-3Q-r6n" secondAttribute="trailingMargin" id="eXu-K4-7SB"/>
+                                                <constraint firstItem="czU-oI-Pcg" firstAttribute="top" secondItem="Uy4-3Q-r6n" secondAttribute="topMargin" constant="28" id="nWN-sa-RDh"/>
+                                                <constraint firstItem="czU-oI-Pcg" firstAttribute="centerY" secondItem="Uy4-3Q-r6n" secondAttribute="centerY" id="oZH-6M-eTz"/>
+                                                <constraint firstItem="JvZ-og-qbr" firstAttribute="centerY" secondItem="Uy4-3Q-r6n" secondAttribute="centerY" id="od5-J5-CCo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="czU-oI-Pcg" id="yA6-dc-Xnh"/>
+                                            <outlet property="nameLabel" destination="JvZ-og-qbr" id="Hjy-PQ-QK8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xL3-no-Kmt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DT1-6l-7Fv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y9c-LK-Dth" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Uh-mO-Tse"/>
+                            <constraint firstItem="y9c-LK-Dth" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9q6-0g-ts0"/>
+                            <constraint firstItem="y9c-LK-Dth" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AXm-rA-pTO"/>
+                            <constraint firstItem="y9c-LK-Dth" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xd1-CU-Q0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="y9c-LK-Dth" id="fDZ-dy-K8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="129"/>
+        </scene>
+    </scenes>
+</document>
